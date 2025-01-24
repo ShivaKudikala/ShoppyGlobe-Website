@@ -27,7 +27,7 @@ Follow these steps to run the ShoppyGlobe project on your local machine:
 
 ### Prerequisites
 
-- Node.js (v14 or higher recommended)
+- Node.js
 - npm or yarn installed globally
 
 ### Steps to Run

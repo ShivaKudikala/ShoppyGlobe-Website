@@ -1,0 +1,151 @@
+/* for basic checkout page */
+
+.checkout-page{
+    padding-top: 5%;
+}
+.checkout-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 5%;
+    padding: 2%;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.checkout-title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #0056b3;
+}
+  
+.progress-indicator {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 20px;
+}
+  
+
+.user-info {
+    margin-bottom: 20px;
+}
+  
+.user-info h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+  
+.user-info form label {
+    display: block;
+    margin-bottom: 10px;
+}
+  
+.user-info form input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+}
+  
+.info-note {
+    font-size: 0.9rem;
+    color: #777;
+    margin-top: 10px;
+}
+  
+
+.payment-placeholder {
+    margin-bottom: 20px;
+}
+  
+.payment-placeholder h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+  
+.payment-placeholder ul {
+    list-style: none;
+    padding: 0;
+}
+  
+.payment-placeholder ul li {
+    margin: 5px 0;
+    padding: 10px;
+    background: #f4f4f9;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+  
+.payment-note {
+    font-size: 0.9rem;
+    color: #777;
+    margin-top: 10px;
+}
+  
+
+.pay-now-button {
+    width: 100%;
+    padding: 12px 0;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #0056b3;
+    border: none;
+    border-radius: 4px;
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+  
+.pay-now-button:hover {
+    background-color: #004999;
+}
+  
+.backtocart-btn{
+    width: 100%;
+    padding: 12px 0;
+    background-color: rgb(166, 181, 115);
+    border: none;
+    font-size: 1rem;
+    border-radius: 4px;
+
+}
+.backtocart-btn:hover{
+    cursor: pointer;
+}
+
+/* Using media queries for responsiveness */
+
+@media screen and (max-width: 960px) {
+    .checkout-page{
+        padding-top: 10%;
+    }
+}
+@media screen and (max-width: 640px) {
+    .checkout-page{
+        padding-top: 15%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .checkout-page{
+        padding-top: 20%;
+    }
+}
+@media screen and (max-width: 380px) {
+    .checkout-page{
+        padding-top: 25%;
+    }
+}
+@media screen and (max-width: 340px) {
+    .checkout-page{
+        padding-top: 45%;
+    }
+}
+@media screen and (max-width: 270px) {
+    .checkout-page{
+        padding-top: 55%;
+    }
+}

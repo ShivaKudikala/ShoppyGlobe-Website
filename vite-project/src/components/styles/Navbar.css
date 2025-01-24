@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Macondo&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
+
+/* For navbar */
+.navbar{
+    display: flex;
+    padding: 10px 0px;
+    flex-direction: column;
+    justify-content: center;
+    position: fixed;
+    color: white;
+    width: 100%;
+    float: left;
+    background-color: #2b2a29;
+    clip-path: polygon(0 0, 100% 0, 96% 100%, 3% 100%);
+}
+.logo-img{
+    height: 50px;
+    width: 50px;
+}
+
+/* for logo and title */
+.nav-sec-1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+/* for links to different pages and search input */
+.nav-sec-2{
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    align-items: center;
+    gap: 2%;
+    margin-top: 1%;
+    text-decoration: none;
+    font-family: "Libre Baskerville", serif;
+    font-style: normal;
+    font-size: 13px;
+}
+.icon-link{
+    text-decoration: none;
+    color: white;
+}
+.cart-items-link {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.cart-icon {
+    font-size: 1rem;
+    margin-right: 5px;
+}
+
+.cart-text-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+.cart-text {
+    font-size: 1.2rem;
+    position: relative;
+    font-family: "Libre Baskerville", serif;
+    font-style: normal;
+    font-size: 15px;
+}
+
+.cart-count {
+    position: absolute;
+    top: -12px;
+    right: -16px;
+    background-color: #ccff33;
+    color: #000;
+    font-size: 1rem;
+    font-weight: bold;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #fff;
+}
+
+
+
+.search{
+    display: flex;
+    gap: 5px;
+}
+
+.search-box input {
+    padding: 5px 20px 5px 10px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+.search-btn{
+    padding: 7px 7px;
+    background-color: #f26522;
+    border-color: #f26522;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+.search-btn:hover{
+    cursor: pointer;
+}
+
+.proj-title{
+    color: white;
+    font-size: 35px;
+    font-family: "Macondo", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* Using media queries for responsiveness */
+
+@media screen and (max-width: 540px) {
+    .search-box input{
+        padding: 5px 10px 5px 5px;
+        font-size: 14px;
+    }
+    .search-btn{
+        padding: 5px 5px;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .search-box input{
+        padding: 5px 10px 5px 5px;
+        font-size: 12px;
+    }
+    .search-btn{
+        padding: 5px 5px;
+    }
+}
+
+@media screen and (max-width: 340px) {
+    .nav-sec-2{
+        display: flex;
+        flex-direction: column;
+        gap: 7px;
+        margin-top: 10px;
+    }
+    .logo-img{
+        height: 40px;
+        width: 40px;
+    }
+    .proj-title{
+        font-size: 27px;
+    }
+}

@@ -1,0 +1,403 @@
+@import url('https://fonts.googleapis.com/css2?family=Stoke:wght@300;400&display=swap');
+
+/* For individual Product */
+
+.product-card{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 1%;
+    box-shadow: 0px 0 30px 10px #f0f0f0;
+}
+.product-image{
+    width: 100%;
+    height: 300px;
+}
+
+.product-details{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+}
+.product-brand{
+    color: #878787;
+    font-size: 14px;
+    font-weight: 500;
+}
+.product-title{
+    display: inline-block;
+    width: calc(100% - 80px);
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    padding: 0;
+}
+.product-price{
+    display: inline-block;
+    font-size: 20px;
+    font-weight: 500;
+    color: #212121;
+}
+.product-status{
+    font-size: 15px;
+    font-weight: 700;
+}
+.addtocart-btn{
+    background-color: #fdc221;
+    padding: 4% 15%;
+    border: none;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.addtocart-btn:hover{
+    cursor: pointer;
+}
+.addcart-icon{
+    margin: 0 10px;
+}
+.addedCart{
+    color: #26a541;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+
+/* **************************************** */
+
+/* For all products using ProductList component */
+
+.products-list{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin: 1%;
+}
+
+.products-title{
+    text-align: center;
+    margin: 2%;
+    font-family: "Stoke", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* ********************************************** */
+
+/* For ProductDetail component, showing detailed info of selected product */
+
+.product-detail{
+    padding-top: 7%; 
+}
+
+.product{
+    margin: 3% 5%;
+    display: flex;
+    box-shadow: 0px 0 30px 10px #f0f0f0;
+    align-items: stretch;
+}
+
+.productd-image{
+    flex: 1;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 1%;
+    box-shadow: 0px 0 30px 10px #f0f0f0;
+}
+
+.productd-content{
+    flex: 2;
+    margin: 1%;
+    width: 70%;
+}
+
+.addCart-btn{
+    margin: 3% 5%;
+    padding: 3% 10%;
+    align-self: center;
+    background-color: #fdc221;
+    border: none;
+    font-size: 17px;
+}
+.addCart-btn:hover{
+    cursor: pointer;
+}
+.addedCart2{
+    margin: 5% 5%;
+    color: #26a541;
+    font-size: 20px;
+    align-self: center;
+}
+
+.productd-brand{
+    color: #878787;
+    font-size: 19px;
+    display: block;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+.productd-title{
+    font-size: 19px;
+    text-decoration: underline;
+    margin-bottom: 1%;
+}
+.productd-price{
+    font-size: 27px;
+    font-weight: 800;
+    color: #212121;
+}
+.productd-discount{
+    color: #26a541;
+    margin: 0 1%;
+    font-weight: bold;
+}
+.productd-category{
+    color: #26a541;
+    margin: 1% 0;
+    font-size: 17px;
+}
+.productd-description{
+    color: #878787;
+}
+.productd-div{
+    display: flex;
+    align-items: center;
+    margin: 1% 0;
+}
+.productd-rating{
+    background-color: #26a541;
+    color: white;
+    font-weight: 500;
+    font-size: 16px;
+    padding: 2px 5px;
+    border-radius: 20px;
+}
+.review-count{
+    color: #878787;
+    font-weight: bold;
+    margin: 0 1%;
+}
+.productd-stock{
+    color: #26a541;
+    margin: 1% 0;
+}
+.productd-shippinginfo{
+    margin: 1% 0;
+    color: #212121;
+    font-size: 17px;
+    font-weight: 600;
+}
+.productd-warrantyinfo{
+    margin: 1% 0;
+    color: #212121;
+    font-size: 17px;
+    font-weight: 600;
+}
+hr{
+    margin: 2% 0;
+    opacity: 0.2;
+    border: 1px solid #878787;
+}
+.ratings-reviews{
+    max-height: 220px;
+    overflow-y: auto;
+    scroll-behavior: smooth;
+}
+.rr-title{
+    font-size: 25px;
+    font-weight: bold;
+    margin: 1% 0;
+}
+
+.reviews-div{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    
+}
+
+.rating-div{
+    display: flex;
+    gap: 15px;
+}
+.reviewer-div{
+    display: flex;
+    gap: 20px;
+    color: #878787;
+}
+.review-rating{
+    padding: 1px 6px;
+    color: white;
+    border-radius: 20px;
+}
+.reviewer-name{
+    font-weight: bold;
+}
+
+/* ***************************************** */
+
+/* For Searched Products */
+
+.notavailable-div{
+    padding-top: 1%;
+}
+.searchedP-title{
+    padding-top: 2%;
+    text-align: center;
+    font-size: 20px;
+}
+.explore-text{
+    text-align: center;
+    font-size: 20px;
+}
+.searchedP-div{
+    display: flex;
+    justify-content: center;
+    margin: 1%;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.span-text{
+    color: red;
+    font-weight: bold;
+}
+
+.no-products-div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 7%;
+    gap: 10px;
+    font-size: 20px;
+}
+
+
+/* ********Spinner*********** */
+
+.spinner {
+    border: 4px solid rgba(0, 0, 0, 0.1);
+    border-top: 4px solid #3498db;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+    margin: auto;
+}
+  
+@keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+}
+  
+.loading-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* ****** */
+/* for error */
+
+.error-loading{
+    display: flex;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+}
+
+/* ******* */
+
+/* for no product */
+
+.no-product{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+}
+.backtohome-btn{
+    background-color: #3498db;
+    padding: 5px 20px;
+    border: none;
+    font-size: 16px;
+    color: white;
+}
+.backtohome-btn:hover{
+    cursor: pointer;
+    background-color: #2a7bb2;
+}
+
+
+/* *********************** */
+
+/* Using media queries for responsiveness */
+
+@media screen and (max-width: 350px) {
+    .products-title{
+        font-size: 25px;
+    }
+}
+
+@media screen and (max-width: 1140px) {
+    .product-detail{
+        padding-top: 10%; 
+    }
+}
+
+@media screen and (max-width: 860px) {
+    .product-detail{
+        padding-top: 13%; 
+    }
+}
+
+@media screen and (max-width: 680px) {
+    .product-detail{
+        padding-top: 18%; 
+    }
+}
+@media screen and (max-width: 480px) {
+    .product-detail{
+        padding-top: 23%; 
+    }
+}
+
+@media screen and (max-width: 380px) {
+    .product-detail{
+        padding-top: 25%; 
+    }
+}
+@media screen and (max-width: 340px) {
+    .product-detail{
+        padding-top: 50%; 
+    }
+}
+@media screen and (max-width: 280px) {
+    .product-detail{
+        padding-top: 60%; 
+    }
+}
+@media screen and (max-width: 900px) {
+    .product{
+        display: flex;
+        flex-direction: column;
+    }
+    .productd-image{
+        width: 100%;
+    }
+    .productd-content{
+        width: 100%;
+    }
+}

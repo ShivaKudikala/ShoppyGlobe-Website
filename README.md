@@ -28,7 +28,7 @@ It allows users to:
   - `DELETE /cart/:id` - Remove item from cart
 - **Database (MongoDB)**:
   - Stores products and cart data.
-  - Implements CRUD operations.
+  - Implemented CRUD operations.
 - **Authentication**:
   - User registration and login with **JWT authentication**.
   - Secured cart operations.
@@ -73,12 +73,13 @@ It allows users to:
    JWT_SECRET="shoppyglobe
    PORT=9898
 
-3. **Run the development server**
+4. **Run the development server**
+   
    for backend
    ```bash
    cd NodeJs
    npm start
    
-   ```bash
+   # for frontend
    npm run dev
 The application will be available at http://localhost:5173.

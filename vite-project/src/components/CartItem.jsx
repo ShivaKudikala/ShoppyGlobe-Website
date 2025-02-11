@@ -16,7 +16,7 @@ function CartItem(props){
         try{
             const token = localStorage.getItem("token");
             // Send a DELETE request to remove the item from the cart
-            await fetch(`http://localhost:9898/api/cart/${props.item._id}`, {
+            await fetch(`http://localhost:9898/cart/${props.item._id}`, {
                 method: "DELETE",
                 headers: {
                     "Content-type": "application/json",
@@ -42,7 +42,7 @@ function CartItem(props){
                 try{
                     const token = localStorage.getItem("token");
                     // Send a PUT request to update the quantity of the item in the cart
-                    const response = await fetch(`http://localhost:9898/api/cart/${props.item._id}`,{
+                    const response = await fetch(`http://localhost:9898/cart/${props.item._id}`,{
                         method: "PUT",
                         headers: {
                             "Content-type": "application/json",
@@ -74,7 +74,7 @@ function CartItem(props){
                     try{
                         const token = localStorage.getItem("token");
                         // Send a PUT request to update the quantity of the item in the cart
-                        const response = await fetch(`http://localhost:9898/api/cart/${props.item._id}`,{
+                        const response = await fetch(`http://localhost:9898/cart/${props.item._id}`,{
                             method: "PUT",
                             headers: {
                                 "Content-type": "application/json",

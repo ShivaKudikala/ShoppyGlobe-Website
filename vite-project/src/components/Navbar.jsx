@@ -10,7 +10,7 @@ import { setItemsToCart } from "../utils/cartSlice.js";
 
 function Navbar(){
     const dispatch = useDispatch();
-    const {data, error, loading} = useFetch("http://localhost:9898/api/cartItems");
+    const {data, error, loading} = useFetch("http://localhost:9898/cartItems");
     
     useEffect(()=> {
         if(data && data.length > 0){

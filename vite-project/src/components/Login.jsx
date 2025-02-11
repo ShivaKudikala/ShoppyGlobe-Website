@@ -19,7 +19,7 @@ function Login() {
                 email: email,
                 password: password,
             }
-            const response = await fetch("http://localhost:9898/api/login", {
+            const response = await fetch("http://localhost:9898/login", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",

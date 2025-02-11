@@ -4,9 +4,9 @@ import getOneProduct from "../Controllers/getOneProduct.js";
 
 // Function to define the routes for the products
 function productRoutes(app) {
-    app.post("/api/product", NewProduct);
-    app.get("/api/products", getProducts);
-    app.get("/api/products/:id", getOneProduct);
+    app.post("/product", NewProduct);
+    app.get("/products", getProducts);
+    app.get("/products/:id", getOneProduct);
 }
 
 export default productRoutes;

@@ -37,7 +37,7 @@ function ProductItem(props){ // component for single product item
             };
             
             // Send a POST request to add the item to the cart
-            const response = await fetch("http://localhost:9898/api/cart",{
+            const response = await fetch("http://localhost:9898/cart",{
                 method: "POST",
                 headers: { 
                     "Content-type" : "application/json",

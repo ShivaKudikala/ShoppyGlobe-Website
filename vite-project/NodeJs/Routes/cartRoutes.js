@@ -6,10 +6,10 @@ import authenticate from "../Controllers/authenicate.js";
 
 // Function to define the routes for the cart
 function cartRoutes(app){
-    app.get("/api/cartItems", getCartItems);
-    app.post("/api/cart", authenticate, newCartItem);
-    app.put("/api/cart/:id", authenticate, updateCartItem);
-    app.delete("/api/cart/:id", authenticate, deleteCartItem);
+    app.get("/cartItems", getCartItems);
+    app.post("/cart", authenticate, newCartItem);
+    app.put("/cart/:id", authenticate, updateCartItem);
+    app.delete("/cart/:id", authenticate, deleteCartItem);
 }
 
 export default cartRoutes;

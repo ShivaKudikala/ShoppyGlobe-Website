@@ -25,7 +25,7 @@ function Register() {
                     password: password,
                 }
                 
-                const response = await fetch("http://localhost:9898/api/register", {
+                const response = await fetch("http://localhost:9898/register", {
                     method: "POST",
                     headers: {
                         "Content-Type": "application/json",

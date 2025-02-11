@@ -7,7 +7,7 @@ import "./styles/Products.css";
 function ProductList(){
     // Component for showing all product using ProductItem component for each product
     const [products, setProducts] = useState([]);
-    const {data, error, loading} = useFetch("http://localhost:9898/api/products"); // Fetching Data
+    const {data, error, loading} = useFetch("http://localhost:9898/products"); // Fetching Data
     const [searchproducts, setSearchproducts] = useState([]);
     const params = useParams(); //using route parameters for search
     

@@ -12,7 +12,7 @@ const EmptyCart = lazy(() => import("./EmptyCart")); // implementing lazy import
 function Cart(){
 
     const dispatch = useDispatch();
-    const {data, error, loading} = useFetch("http://localhost:9898/api/cartItems"); // fetching cart items from backend
+    const {data, error, loading} = useFetch("http://localhost:9898/cartItems"); // fetching cart items from backend
 
     // Function to set items to cart
     useEffect(()=> {

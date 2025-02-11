@@ -12,7 +12,7 @@ function ProductDetail(){
 
     const cart = useSelector((state) => state.cart.items);
     const [product, setProduct] = useState(null); // product for detailed information about it
-    const {data, error, loading} = useFetch("http://localhost:9898/api/products");  // fetching data using custom useFetch hook
+    const {data, error, loading} = useFetch("http://localhost:9898/products");  // fetching data using custom useFetch hook
     const dispatch = useDispatch();
 
     const params = useParams(); // using route parameters to get id  of product
@@ -59,7 +59,7 @@ function ProductDetail(){
                 returnPolicy: product.returnPolicy
             };
     
-            const response = await fetch("http://localhost:9898/api/cart",{
+            const response = await fetch("http://localhost:9898/cart",{
                 method: "POST",
                 headers: { 
                     "Content-type" : "application/json",

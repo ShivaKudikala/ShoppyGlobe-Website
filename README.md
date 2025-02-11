@@ -70,7 +70,7 @@ It allows users to:
    ```bash
    # I used this details
    MONGO_URI=mongodb://localhost:27017/ShoppyGlobe
-   JWT_SECRET="shoppyglobe
+   JWT_SECRET="shoppyglobe"
    PORT=9898
 
 4. **Run the development server**

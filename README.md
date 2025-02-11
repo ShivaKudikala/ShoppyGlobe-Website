@@ -1,34 +1,49 @@
-# ShoppyGlobe
+# ShoppyGlobe E-commerce Application
 
-ShoppyGlobe is a modern e-commerce platform designed to provide users with a seamless and engaging online shopping experience. Explore a wide variety of products with a responsive design, intuitive navigation, and fast performance.
+## Overview
+ShoppyGlobe is a full-stack e-commerce application built with **React.js** for the frontend and **Node.js with Express and MongoDB** for the backend.  
+It allows users to:
+- Browse products
+- View product details
+- Add items to the cart
+- Manage cart operations
+- Authenticate with JWT-based user login
 
 ## Features
 
-- **Responsive Design**: Fully optimized for all devices, ensuring a great experience on desktops, tablets, and mobile phones.
-- **Search Functionality**: Search for products with ease using the powerful search bar.
-- **Dynamic Cart**: Add items to the cart, view pricing details, and prepare for checkout.
-- **Customizable Components**: Built with reusable components to ensure scalability.
-- **Fast Performance**: Built using Vite for faster development and lightning-fast production builds.
+### 🖥️ Frontend (React.js)
+- **Component-Based Architecture**: Reusable components like `Header`, `ProductList`, `ProductDetail`, `Cart`, etc.
+- **State Management (Redux)**: Cart operations and product filtering.
+- **Routing (React Router)**: Pages for Home, Product Details, Cart, and Checkout.
+- **API Integration**: Fetch products and manage the cart using RESTful APIs.
+- **Performance Optimization**: Lazy loading, memoization, and optimized API calls.
+- **Responsive Design**: Fully responsive UI with CSS.
+
+### 🖥️ Backend (Node.js, Express, MongoDB)
+- **RESTful APIs**:
+  - `GET /products` - Fetch product list
+  - `GET /products/:id` - Fetch product details
+  - `POST /cart` - Add product to cart
+  - `PUT /cart/:id` - Update cart item quantity
+  - `DELETE /cart/:id` - Remove item from cart
+- **Database (MongoDB)**:
+  - Stores products and cart data.
+  - Implements CRUD operations.
+- **Authentication**:
+  - User registration and login with **JWT authentication**.
+  - Secured cart operations.
+- **Error Handling & Validation**:
+  - Validates user input and handles API errors.
 
 ---
 
-## Tech Stack
-
-- **Frontend**: React, CSS
-- **Build Tool**: Vite
-- **State Management**: Redux
-- **API Integration**: Fetch (for retrieving product data)
-
----
-
-## Installation and Running Locally
-
-Follow these steps to run the ShoppyGlobe project on your local machine:
+## 🛠 Installation
 
 ### Prerequisites
+- **Node.js** installed
+- **MongoDB** installed
+- **Git** installed
 
-- Node.js
-- npm or yarn installed globally
 
 ### Steps to Run
 
@@ -40,11 +55,30 @@ Follow these steps to run the ShoppyGlobe project on your local machine:
    
 2. **Install Dependencies**
 
+      for backend
+      ```bash
+      cd NodeJs
+      npm install
+
+      #for frontend
+  
+      ```bash
+      npm install
+
+3. ** Chance the names according **
+
    ```bash
-   npm install
+   # I used this details
+   MONGO_URI=mongodb://localhost:27017/ShoppyGlobe
+   JWT_SECRET="shoppyglobe
+   PORT=9898
 
 3. **Run the development server**
-
+   for backend
+   ```bash
+   cd NodeJs
+   npm start
+   
    ```bash
    npm run dev
-  The application will be available at http://localhost:5173.
+The application will be available at http://localhost:5173.

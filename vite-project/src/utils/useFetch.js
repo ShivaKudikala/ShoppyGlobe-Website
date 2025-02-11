@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 
 // custom hook for useFetch
 function useFetch(url){
-    const [data, setdata] = useState(null);
+    const [data, setdata] = useState([]);
     const [error, seterror] = useState(null);
     const [loading, setloading] = useState(true);
     useEffect(()=>{

@@ -8,6 +8,8 @@ import store from './utils/Store.js';
 import Cart from './components/Cart.jsx';
 import ProductDetail from './components/ProductDetail.jsx';
 import { lazy, Suspense } from 'react';
+import Login from './components/Login.jsx';
+import Register from './components/Register.jsx';
 
 const Checkout = lazy(() => import("./components/Checkout.jsx")); // lazy imports
 const NotFound = lazy(() => import("./components/NotFound.jsx"));
@@ -38,6 +40,14 @@ const appRouter = createBrowserRouter([
       {
         path: "/checkout",
         element: <Suspense fallback={<div className="loading-container"><div className="spinner"></div></div>}><Checkout /></Suspense>,
+      },
+      {
+        path: "/login",
+        element: <Login />,
+      },
+      {
+        path: "/register",
+        element: <Register />,
       },
     ]
   },

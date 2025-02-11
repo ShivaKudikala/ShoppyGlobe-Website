@@ -7,20 +7,20 @@ import "./styles/Products.css";
 function ProductList(){
     // Component for showing all product using ProductItem component for each product
     const [products, setProducts] = useState([]);
-    const {data, error, loading} = useFetch("https://dummyjson.com/products"); // Fetching Data
+    const {data, error, loading} = useFetch("http://localhost:9898/api/products"); // Fetching Data
     const [searchproducts, setSearchproducts] = useState([]);
     const params = useParams(); //using route parameters for search
     
 
     useEffect(()=>{ //Setting products from data
       if(data){
-        setProducts(data.products);
+        setProducts(data);
       }
     }, [data]);
 
     useEffect(()=>{ // For searched Products using route parameters
       if(products.length > 0 && params.name){
-          const searchedProducts = products.filter((product) => product.title.toLowerCase().includes(params.name.toLowerCase()))
+          const searchedProducts = products.filter((product) => product.name.toLowerCase().includes(params.name.toLowerCase()))
           setSearchproducts(searchedProducts);
       } else {
         setSearchproducts([]);
@@ -54,7 +54,7 @@ function ProductList(){
               <h1 className="searchedP-title">Searched Products</h1>
               <div className="searchedP-div">
                 {searchproducts.map((product) => (
-                  <ProductItem key={product.id} Product={product} />
+                  <ProductItem key={product._id} Product={product} />
                 ))}
               </div>
             </>
@@ -77,7 +77,7 @@ function ProductList(){
           <h1 className="products-title">Browse Our Complete Product Range</h1>
           <div className="products-list">
             {products.map((product) => (
-              <ProductItem key={product.id} Product={product} />
+              <ProductItem key={product._id} Product={product} />
             ))}
           </div>
         </>

@@ -115,6 +115,11 @@
     font-weight: 400;
     font-style: normal;
 }
+.login-icon{
+    font-size: 1.2rem;
+    color: white;
+    margin-right: 5px;
+}
 
 /* Using media queries for responsiveness */
 

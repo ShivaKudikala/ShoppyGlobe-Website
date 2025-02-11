@@ -1,16 +1,43 @@
 import "./styles/Navbar.css";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHouse, faCartShopping, faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
+import { faHouse, faCartShopping, faMagnifyingGlass, faCircleUser } from '@fortawesome/free-solid-svg-icons';
 
-import { useSelector } from "react-redux";
-import { useState } from "react";
+import { useSelector, useDispatch } from "react-redux";
+import { useEffect, useState } from "react";
+import useFetch from "../utils/useFetch.js";
+import { setItemsToCart } from "../utils/cartSlice.js";
 
 function Navbar(){
+    const dispatch = useDispatch();
+    const {data, error, loading} = useFetch("http://localhost:9898/api/cartItems");
+    
+    useEffect(()=> {
+        if(data && data.length > 0){
+            dispatch(setItemsToCart(data));
+        }
+    }, [data, dispatch]);
 
-    const cart = useSelector((state) => state.cart); // for count of cart items
+    const cart = useSelector((state) => state.cart.items); // for count of cart items
     const count = cart.length;
+
     const [search, setSearch] = useState(""); // for search options of diff items
+
+    if(loading){  // if loading...
+        return (
+          <div className="loading-container">
+            <div className="spinner"></div>
+          </div>
+        )
+    }
+  
+    if(error){ // error handling
+        return (
+          <div className="error-loading">
+            <p>Errorrrr: {error}</p>
+          </div>
+        ) 
+    }
 
     return (
         <>  
@@ -42,6 +69,7 @@ function Navbar(){
                             </div>
                         </div>
                     </Link>
+                    <Link to={"/login"} className="icon-link"><FontAwesomeIcon className="login-icon" color="#4361ee" icon={faCircleUser} />User</Link>
                 </div>
             </div>
         </>

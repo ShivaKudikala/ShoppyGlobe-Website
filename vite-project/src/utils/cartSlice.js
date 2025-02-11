@@ -1,19 +1,25 @@
-import { createSlice } from '@reduxjs/toolkit'
+import { createSlice } from '@reduxjs/toolkit';
+import useFetch from './useFetch.js';
 
 // cartSlice for maintaing data of cart and functions addtocart and removefromcart
 
 const cartSlice = createSlice({
     name: "cart",
-    initialState: [],
+    initialState: {
+        items : [],
+    },
     reducers: {
+        setItemsToCart : (state, actions) => {
+            state.items = actions.payload;
+        },
         addToCart : (state, actions) => {
-            state.push(actions.payload)
+            state.items.push(actions.payload)
         },
         removeFromCart : (state, actions) => {
-            return state.filter((item) => item.id !== actions.payload);
+            state.items = state.items.filter((item) => item.id !== actions.payload);
         }
     },
 })
 
-export const {addToCart, removeFromCart} = cartSlice.actions;
+export const {setItemsToCart, addToCart, removeFromCart} = cartSlice.actions;
 export default cartSlice.reducer;

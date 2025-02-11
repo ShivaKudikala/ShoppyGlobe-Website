@@ -18,7 +18,7 @@
     align-items: center;
 }
 .hr-tag{
-    margin: 2%;
+    margin: 1%;
 }
 
 .cart-image-div{
@@ -26,17 +26,26 @@
     flex-direction: column;
     width: 20%;
     justify-content: flex-start;
+    margin: 1%;
+}
+
+.cart-quantity{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5px;
 }
 .cart-img{
     height: 170px;
+    width: 100%;
 }
 .cart-delete-btn{
     background-color: #fdc221;
     border: none;
     align-self: center;
-    padding: 5%;
+    padding: 2% 4%;
     border-radius: 50%;
-    font-size: 20px;
+    font-size: 15px;
 }
 .cart-delete-btn:hover{
     cursor: pointer;
@@ -73,6 +82,28 @@
 }
 .return-policy{
     color: #878787;
+}
+
+.quantity-div{
+    display: flex;
+    justify-content: space-between;
+    margin: 5px 10px;
+    gap: 12px;
+    align-items: center;
+    border: 3px solid orange;
+    padding: 1px 7px;
+    border-radius: 20px;
+}
+.quantity-btns{
+    border: none;
+    background-color: white;
+    font-size: 15px;
+}
+.quantity-tag{
+    font-size: 15px;
+}
+.quantity-btns:hover{
+    cursor: pointer;
 }
 
 /* Price section */
